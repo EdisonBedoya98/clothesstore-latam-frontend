@@ -1,6 +1,6 @@
 <mat-form-field appearance="fill">
-    <button mat-icon-button class="search-icon" matSuffix>
+    <button mat-icon-button class="search-icon" matSuffix (click)="onPropagate()">
             <mat-icon>search</mat-icon>
           </button>
-    <input matInput color="warn" type="search" placeholder="Buscar aquí producto" class="search-input">
+    <input matInput color="warn" [(ngModel)]="searchText" type="search" placeholder="Buscar aquí producto">
 </mat-form-field>

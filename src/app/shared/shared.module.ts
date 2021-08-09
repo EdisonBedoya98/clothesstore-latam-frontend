@@ -14,9 +14,14 @@ import { SearchBarComponent } from './header/search-bar/search-bar.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { MatCarouselModule } from '@ngbmodule/material-carousel';
 import {MatListModule} from '@angular/material/list';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatCardModule} from '@angular/material/card';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MainCarouselComponent } from './carousels/main-carousel/main-carousel.component';
+import { CategoryCardsComponent } from './category-cards/category-cards.component';
+import { ProductCardComponent } from './product-card/product-card.component';
+import { ProductsListComponent } from './products-list/products-list.component';
+import { MainCarouselComponent } from './main-carousel/main-carousel.component';
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -24,6 +29,9 @@ import { MainCarouselComponent } from './carousels/main-carousel/main-carousel.c
     MobileHeaderComponent,
     DesktopHeaderComponent,
     SearchBarComponent,
+    CategoryCardsComponent,
+    ProductCardComponent,
+    ProductsListComponent,
     MainCarouselComponent
   ],
   imports: [
@@ -37,13 +45,24 @@ import { MainCarouselComponent } from './carousels/main-carousel/main-carousel.c
     MatSidenavModule,
     MatListModule,
     MatCarouselModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatGridListModule,
+    MatCardModule
   ],
   exports: [
     CategoriesComponent,
+    MatToolbarModule,
     MobileHeaderComponent,
     DesktopHeaderComponent,
-    MainCarouselComponent
+    MainCarouselComponent,
+    CategoryCardsComponent,
+    ProductCardComponent,
+    MatGridListModule,
+    MatIconModule,
+    MatListModule,
+    MatSidenavModule,
+    SearchBarComponent,
+    ProductsListComponent
   ]
 })
 export class SharedModule { }

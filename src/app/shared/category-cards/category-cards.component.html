@@ -1,0 +1,7 @@
+<mat-grid-list cols="4">
+    <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows">
+        <mat-card class="card">
+            <img mat-card-image src={{tile.img}} alt="image" width="80%" height="50%">
+        </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>

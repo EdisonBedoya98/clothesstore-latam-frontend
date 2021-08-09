@@ -1,0 +1,64 @@
+<mat-drawer-container autosize>
+    <mat-drawer #drawer class="sidenav" mode="over" (click)="drawer.toggle()">
+        <mat-list role="list">
+            <mat-list-item role="listitem">
+                <button mat-icon-button color="primary" class="close-button">
+            <mat-icon >close</mat-icon>
+          </button></mat-list-item>
+            <mat-list-item role="listitem" *ngFor="let category of categories">{{category}}</mat-list-item>
+
+        </mat-list>
+
+    </mat-drawer>
+    <table>
+        <tr>
+            <td>
+                <button class="button-menu" type="button" mat-icon-button (click)="drawer.toggle()">
+                        <mat-icon>menu</mat-icon>
+                      </button>
+            </td>
+            <td>
+                <app-mobile-header></app-mobile-header>
+
+            </td>
+        </tr>
+
+
+    </table>
+    <div class="container-search-bar">
+
+        <app-search-bar></app-search-bar>
+
+    </div>
+
+    <app-main-carousel></app-main-carousel>
+
+    <div class="container-category-card">
+        <app-category-cards></app-category-cards>
+    </div>
+
+    <table *ngIf="products.length > 0">
+        <tr>
+            <td class="arrow">
+                <button mat-button class="button-ios">
+                <mat-icon>arrow_back_ios_new</mat-icon>
+              </button>
+            </td>
+            <td class="container-product-card">
+
+                <app-product-card [title]="products[0].title" [img]="products[0].thumbnail" [price]="products[0].price" [promotionPrice]="products[0].price"></app-product-card>
+
+            </td>
+            <td class="arrow">
+                <button mat-button class="button-ios">
+                <mat-icon>arrow_forward_ios</mat-icon>
+              </button>
+            </td>
+        </tr>
+
+
+    </table>
+
+    <img mat-card-image src="/assets/img/footer-mobile.png">
+
+</mat-drawer-container>

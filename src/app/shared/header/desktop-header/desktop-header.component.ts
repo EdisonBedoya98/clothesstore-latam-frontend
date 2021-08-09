@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output,EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-desktop-header',
@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./desktop-header.component.scss']
 })
 export class DesktopHeaderComponent implements OnInit {
-
+  @Output()
+  propagate = new EventEmitter<string>();
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  processPropagate(searchText:string) {
+    this.propagate.emit(searchText);
+  }
+  
 }

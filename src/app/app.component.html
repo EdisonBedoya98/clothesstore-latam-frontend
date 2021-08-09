@@ -1,12 +1,9 @@
 <router-outlet></router-outlet>
 
 <div *ngIf="!isMobileResolution; else mobileContainer">
-    <app-desktop-header></app-desktop-header>
-    <app-categories></app-categories>
-    <app-main-carousel></app-main-carousel>
+    <app-desktop-view></app-desktop-view>
 </div>
 <ng-template #mobileContainer>
-    <app-mobile-header></app-mobile-header>
+    <app-mobile-view></app-mobile-view>
 
-    <app-main-carousel></app-main-carousel>
 </ng-template>

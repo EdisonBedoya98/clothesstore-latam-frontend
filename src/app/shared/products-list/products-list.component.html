@@ -1,0 +1,5 @@
+<mat-grid-list cols="4" *ngIf="products.length > 0">
+    <mat-grid-tile colspan="1" rowspan="2" *ngFor="let product of products;let i = index">
+        <app-product-card [title]="products[i].title" [img]="products[i].thumbnail" [price]="products[i].price" [promotionPrice]="products[i].price"></app-product-card>
+    </mat-grid-tile>
+</mat-grid-list>
