@@ -1,0 +1,33 @@
+<mat-card class="card">
+
+    <img mat-card-image [src]="img" alt="Photo of a Shiba Inu">
+
+    <mat-card-content class="card-content">
+        <h2 class="product-name">{{title}}</h2>
+
+        <div>
+
+            <table>
+                <tr>
+                    <td class="promotion">
+                        <h2>{{price}}</h2>
+                    </td>
+                    <td class="price-standard">
+                        <h2>
+                            {{promotionPrice}}
+                        </h2>
+                    </td>
+                </tr>
+            </table>
+
+
+        </div>
+
+    </mat-card-content>
+    <mat-card-actions class="card-action">
+        <button mat-button class="button-add-car" aria-label="Example icon button with a home icon">
+            <mat-icon>add_shopping_cart</mat-icon>
+            Agregar al carrito
+          </button>
+    </mat-card-actions>
+</mat-card>

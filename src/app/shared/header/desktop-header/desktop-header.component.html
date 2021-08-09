@@ -1,0 +1,14 @@
+<mat-toolbar class="toolbar">
+    <span class="store-name">CLOTHESSTORE</span>
+    <div class="search-bar">
+        <app-search-bar (propagate)="processPropagate($event)"></app-search-bar>
+    </div>
+    <button mat-icon-button class="header-icon">
+          <mat-icon matBadge="1">shopping_cart</mat-icon>
+        </button>
+    <button mat-icon-button class="header-icon">
+      <mat-icon>perm_identity</mat-icon>
+    </button>
+    <button mat-stroked-button>Iniciar sesión</button>
+
+</mat-toolbar>
